@@ -46,8 +46,68 @@ Here are some of the visualization.https://public.tableau.com/app/profile/bonifa
 ![image](https://github.com/user-attachments/assets/2adbf64d-ecda-4af4-a37e-2b97cb7648e5)
 ![image](https://github.com/user-attachments/assets/f3d06287-c9e8-4b69-b1bf-c29cf2864bdc)
 
+## Model Performance Overview
+### Comparison of RNN and CNN Model Performance  
 
+The Recurrent Neural Network (RNN) and Convolutional Neural Network (CNN) were implemented to tackle a challenging multi-class classification problem with 40 classes, where random guessing yields a baseline accuracy of just 2.5%. Below is a summary of their performance and implications for business understanding:
 
+---
 
+#### **Recurrent Neural Network (RNN):**
+1. **Performance Metrics:**
+   - **Accuracy:** 51.1%  
+   - **Precision:** 66.2%  
+   - **Recall:** 31.2%  
+   - **F1-Score:** 0.425  
+   - **Cohen's Kappa:** 0.331 (moderate agreement)  
+   - **MCC:** 0.350 (moderate correlation)
 
+2. **Strengths:**
+   - **Sequential Data Handling:** RNN, with its LSTM layers, effectively captured temporal dependencies and patterns in the data.
+   - **Balanced Generalization:** Training and validation curves suggest no signs of overfitting, indicating that the model generalizes well.
+   - **Moderate Agreement:** Cohen's Kappa and MCC show that the RNN performs significantly better than random guessing.
 
+3. **Weaknesses:**
+   - **Low Recall:** The model struggles to capture all true positive cases, which could lead to missed critical insights in business decisions.
+   - **F1-Score:** While better than random guessing, the balance between precision and recall still needs improvement for real-world deployment.
+
+4. **Implication:**  
+   The RNN's performance demonstrates moderate predictive power, making it useful for identifying key patterns in sequential data, especially where false positives are more tolerable than false negatives.
+
+---
+
+#### **Convolutional Neural Network (CNN):**
+1. **Performance Metrics:**
+   - **Accuracy:** 48.4%  
+   - **Precision:** 64.9%  
+   - **Recall:** 28.0%  
+   - **F1-Score:** 0.372  
+   - **Cohen's Kappa:** 0.268 (fair agreement)  
+   - **MCC:** 0.289 (weak correlation)
+
+2. **Strengths:**
+   - **Spatial Feature Extraction:** CNN effectively recognized local patterns in structured data through convolutional layers.
+   - **Precision:** The model minimized false positives better than the RNN, which is advantageous in scenarios where incorrect classifications are costly.
+
+3. **Weaknesses:**
+   - **Recall:** The CNN performed poorly in capturing true positive cases, indicating difficulty in identifying less frequent classes.
+   - **Overfitting:** Evidence of overfitting after 0.5 epochs suggests the model struggles to generalize to unseen data.
+   - **Lower Agreement:** Cohen's Kappa and MCC scores indicate weaker reliability compared to the RNN.
+
+4. **Implication:**  
+   The CNN model is less suited for this problem due to its limited ability to generalize and its struggles with recall. Its use may result in overlooking critical insights, which could lead to suboptimal business outcomes.
+
+---
+
+### Conclusion
+
+The Recurrent Neural Network (RNN) outperforms the Convolutional Neural Network (CNN) in predicting the primary contributory cause of accidents. The RNN achieves higher accuracy (0.51) and a better Cohen's Kappa score (0.33) compared to the CNN’s accuracy (0.48) and Cohen’s Kappa score (0.27). These results indicate that the RNN model is more reliable and aligns better with the true labels in the data. While both models show moderate performance, the RNN demonstrates a stronger ability to generalize the relationships in the dataset.
+
+### Recommendations
+
+Adopt the RNN Model: Since the RNN performs better, it should be the model of choice for predicting accident causes in this application.
+Optimize the RNN Model: Consider fine-tuning the hyperparameters or experimenting with more advanced architectures like LSTMs or GRUs to improve performance further.
+Address Class Imbalance: The dataset's imbalance may affect model performance. Techniques such as weighted loss functions or resampling methods should be explored.
+Enhance Features: Investigate the inclusion of additional features or the refinement of existing ones to capture more relevant patterns in the data.
+Evaluate Other Models: For robustness, additional models (e.g., Gradient Boosting or Transformer-based architectures) should be explored and compared.
+Monitor Overfitting: Pay close attention to training dynamics to ensure models generalize effectively, as evidenced by CNN overfitting in earlier epochs.
