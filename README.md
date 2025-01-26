@@ -40,7 +40,7 @@ This dataset was sourced from kaggle and it has 794956 and 48 columns.The datase
 We have conducted an Exploratory Data Analysis (EDA) to better understand the patterns, trends, and impacts of traffic accidents on both the economy and public health. Our analysis focused on various key aspects of accidents, including their distribution across injury types, economic costs, contributing causes, high-risk locations, and temporal patterns.
 
 The visualizations and analysis performed here provide a comprehensive understanding of the factors influencing traffic accidents. By examining the relationship between accidents and various elements such as injury severity, damage costs, contributing causes, locations, speed, time, and more, we are better equipped to develop strategies to mitigate accidents, enhance public safety, and address the economic impacts of traffic incidents.
-Here are some of the visualization.
+Here are some of the visualization.https://public.tableau.com/app/profile/boniface.ngechu/viz/Book1_17379105122570/Dashboard1?publish=yes 
 
 ![image](https://github.com/user-attachments/assets/4deb39d1-e3b7-4105-b664-0d1c86d10b50)
 ![image](https://github.com/user-attachments/assets/2adbf64d-ecda-4af4-a37e-2b97cb7648e5)
