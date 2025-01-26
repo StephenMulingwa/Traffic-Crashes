@@ -47,13 +47,9 @@ Here are some of the visualization.https://public.tableau.com/app/profile/bonifa
 ![image](https://github.com/user-attachments/assets/f3d06287-c9e8-4b69-b1bf-c29cf2864bdc)
 
 ## Model Performance Overview
-### Comparison of RNN and CNN Model Performance  
+Through predictive modeling and data analysis, the project seeks to generate actionable insights to enable data-driven interventions to enhance road safety, optimize resource allocation, and inform policy decisions.
 
-The Recurrent Neural Network (RNN) and Convolutional Neural Network (CNN) were implemented to tackle a challenging multi-class classification problem with 40 classes, where random guessing yields a baseline accuracy of just 2.5%. Below is a summary of their performance and implications for business understanding:
-
----
-
-#### **Recurrent Neural Network (RNN):**
+#### ** 1.Recurrent Neural Network (RNN):**
 1. **Performance Metrics:**
    - **Accuracy:** 51.1%  
    - **Precision:** 66.2%  
@@ -76,7 +72,7 @@ The Recurrent Neural Network (RNN) and Convolutional Neural Network (CNN) were i
 
 ---
 
-#### **Convolutional Neural Network (CNN):**
+#### ** 2.Convolutional Neural Network (CNN):**
 1. **Performance Metrics:**
    - **Accuracy:** 48.4%  
    - **Precision:** 64.9%  
@@ -97,7 +93,9 @@ The Recurrent Neural Network (RNN) and Convolutional Neural Network (CNN) were i
 4. **Implication:**  
    The CNN model is less suited for this problem due to its limited ability to generalize and its struggles with recall. Its use may result in overlooking critical insights, which could lead to suboptimal business outcomes.
 
----
+### Objectives
+#### Predict the primary contributory cause of a car accident.
+ -The primary objective of this project is to predict the primary contributory cause of car accidents, providing the Vehicle Safety Board with actionable insights to enhance road safety, optimize resource allocation, and inform evidence-based policy decisions
 
 ### Conclusion
 
@@ -105,9 +103,14 @@ The Recurrent Neural Network (RNN) outperforms the Convolutional Neural Network 
 
 ### Recommendations
 
-Adopt the RNN Model: Since the RNN performs better, it should be the model of choice for predicting accident causes in this application.
-Optimize the RNN Model: Consider fine-tuning the hyperparameters or experimenting with more advanced architectures like LSTMs or GRUs to improve performance further.
-Address Class Imbalance: The dataset's imbalance may affect model performance. Techniques such as weighted loss functions or resampling methods should be explored.
-Enhance Features: Investigate the inclusion of additional features or the refinement of existing ones to capture more relevant patterns in the data.
-Evaluate Other Models: For robustness, additional models (e.g., Gradient Boosting or Transformer-based architectures) should be explored and compared.
-Monitor Overfitting: Pay close attention to training dynamics to ensure models generalize effectively, as evidenced by CNN overfitting in earlier epochs.
+-Adopt the RNN Model: Since the RNN performs better, it should be the model of choice for predicting accident causes in this application.
+
+-Optimize the RNN Model: Consider fine-tuning the hyperparameters or experimenting with more advanced architectures like LSTMs or GRUs to improve performance further.
+
+-Address Class Imbalance: The dataset's imbalance may affect model performance. Techniques such as weighted loss functions or resampling methods should be explored.
+
+-Enhance Features: Investigate the inclusion of additional features or the refinement of existing ones to capture more relevant patterns in the data.
+
+-Evaluate Other Models: For robustness, additional models (e.g., Gradient Boosting or Transformer-based architectures) should be explored and compared.
+
+-Monitor Overfitting: Pay close attention to training dynamics to ensure models generalize effectively, as evidenced by CNN overfitting in earlier epochs.
