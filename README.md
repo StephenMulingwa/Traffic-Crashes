@@ -48,6 +48,10 @@ Here are some of the visualization.https://public.tableau.com/app/profile/bonifa
 ### 2. Accident Occurrence each Month.
 ![image](https://github.com/user-attachments/assets/005506a7-2914-42ab-98b7-1f79c31b68e7)
 
+### 3. Crashes by Time of Day
+ ![image](https://github.com/user-attachments/assets/999f60cc-4119-4f5a-93d6-67d60c5befed)
+
+
 
 
 
