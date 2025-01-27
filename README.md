@@ -112,15 +112,14 @@ Through predictive modeling and data analysis, the project seeks to generate act
 The Recurrent Neural Network (RNN) outperforms the Convolutional Neural Network (CNN) in predicting the primary contributory cause of accidents. The RNN achieves higher accuracy (0.51) and a better Cohen's Kappa score (0.33) compared to the CNN’s accuracy (0.48) and Cohen’s Kappa score (0.27). These results indicate that the RNN model is more reliable and aligns better with the true labels in the data. While both models show moderate performance, the RNN demonstrates a stronger ability to generalize the relationships in the dataset.
 
 ### Recommendations
+- Adopt the RNN Model: Since the RNN performs better, it should be the model of choice for predicting accident causes in this application.
 
--Adopt the RNN Model: Since the RNN performs better, it should be the model of choice for predicting accident causes in this application.
+- Optimize the RNN Model: Consider fine-tuning the hyperparameters or experimenting with more advanced architectures like LSTMs or GRUs to improve performance further.
 
--Optimize the RNN Model: Consider fine-tuning the hyperparameters or experimenting with more advanced architectures like LSTMs or GRUs to improve performance further.
+- Address Class Imbalance: The dataset's imbalance may affect model performance. Techniques such as weighted loss functions or resampling methods should be explored.
 
--Address Class Imbalance: The dataset's imbalance may affect model performance. Techniques such as weighted loss functions or resampling methods should be explored.
+- Enhance Features: Investigate the inclusion of additional features or the refinement of existing ones to capture more relevant patterns in the data.
 
--Enhance Features: Investigate the inclusion of additional features or the refinement of existing ones to capture more relevant patterns in the data.
+- Evaluate Other Models: For robustness, additional models (e.g., Gradient Boosting or Transformer-based architectures) should be explored and compared.
 
--Evaluate Other Models: For robustness, additional models (e.g., Gradient Boosting or Transformer-based architectures) should be explored and compared.
-
--Monitor Overfitting: Pay close attention to training dynamics to ensure models generalize effectively, as evidenced by CNN overfitting in earlier epochs.
+- Monitor Overfitting: Pay close attention to training dynamics to ensure models generalize effectively, as evidenced by CNN overfitting in earlier epochs.
