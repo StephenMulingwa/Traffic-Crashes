@@ -42,8 +42,14 @@ We have conducted an Exploratory Data Analysis (EDA) to better understand the pa
 The visualizations and analysis performed here provide a comprehensive understanding of the factors influencing traffic accidents. By examining the relationship between accidents and various elements such as injury severity, damage costs, contributing causes, locations, speed, time, and more, we are better equipped to develop strategies to mitigate accidents, enhance public safety, and address the economic impacts of traffic incidents.
 Here are some of the visualization.https://public.tableau.com/app/profile/boniface.ngechu/viz/Book1_17379105122570/Dashboard1?publish=yes 
 ## Data Visualization
-### Crash Distribution by Bay of Week.
+### 1.  Crash Distribution by Day of Week.
 ![image](https://github.com/user-attachments/assets/7c36981a-9911-4619-b595-86032cb8186d)
+
+### 2. Accident Occurrence each Month.
+![image](https://github.com/user-attachments/assets/005506a7-2914-42ab-98b7-1f79c31b68e7)
+
+
+
 
 
 ## Model Performance Overview
