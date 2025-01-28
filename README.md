@@ -105,7 +105,7 @@ Through predictive modeling and data analysis, the project seeks to generate act
 
 ### Objectives
 #### Predict the primary contributory cause of a car accident.
- -The primary objective of this project is to predict the primary contributory cause of car accidents, providing the Vehicle Safety Board with actionable insights to enhance road safety, optimize resource allocation, and inform evidence-based policy decisions
+- The primary objective of this project is to predict the primary contributory cause of car accidents, providing the Vehicle Safety Board with actionable insights to enhance road safety, optimize resource allocation, and inform evidence-based policy decisions
 
 ### Conclusion
 
