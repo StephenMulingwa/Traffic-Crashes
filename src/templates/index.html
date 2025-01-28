@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Crash Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6 text-center">Traffic Crash Prediction</h1>
+        <form action="/predict" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <!-- Posted Speed Limit -->
+            <div class="mb-4">
+                <label for="posted_speed_limit" class="block text-gray-700 text-sm font-bold mb-2">Posted Speed
+                    Limit:</label>
+                <input type="number" name="POSTED_SPEED_LIMIT" id="posted_speed_limit"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Traffic Control Device -->
+            <div class="mb-4">
+                <label for="traffic_control_device" class="block text-gray-700 text-sm font-bold mb-2">Traffic Control
+                    Device:</label>
+                <input type="text" name="TRAFFIC_CONTROL_DEVICE" id="traffic_control_device"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Device Condition -->
+            <div class="mb-4">
+                <label for="device_condition" class="block text-gray-700 text-sm font-bold mb-2">Device
+                    Condition:</label>
+                <input type="text" name="DEVICE_CONDITION" id="device_condition"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Weather Condition -->
+            <div class="mb-4">
+                <label for="weather_condition" class="block text-gray-700 text-sm font-bold mb-2">Weather
+                    Condition:</label>
+                <input type="text" name="WEATHER_CONDITION" id="weather_condition"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Lighting Condition -->
+            <div class="mb-4">
+                <label for="lighting_condition" class="block text-gray-700 text-sm font-bold mb-2">Lighting
+                    Condition:</label>
+                <input type="text" name="LIGHTING_CONDITION" id="lighting_condition"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- First Crash Type -->
+            <div class="mb-4">
+                <label for="first_crash_type" class="block text-gray-700 text-sm font-bold mb-2">First Crash
+                    Type:</label>
+                <input type="text" name="FIRST_CRASH_TYPE" id="first_crash_type"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Trafficway Type -->
+            <div class="mb-4">
+                <label for="trafficway_type" class="block text-gray-700 text-sm font-bold mb-2">Trafficway Type:</label>
+                <input type="text" name="TRAFFICWAY_TYPE" id="trafficway_type"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Alignment -->
+            <div class="mb-4">
+                <label for="alignment" class="block text-gray-700 text-sm font-bold mb-2">Alignment:</label>
+                <input type="text" name="ALIGNMENT" id="alignment"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Roadway Surface Condition -->
+            <div class="mb-4">
+                <label for="roadway_surface_cond" class="block text-gray-700 text-sm font-bold mb-2">Roadway Surface
+                    Condition:</label>
+                <input type="text" name="ROADWAY_SURFACE_COND" id="roadway_surface_cond"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Road Defect -->
+            <div class="mb-4">
+                <label for="road_defect" class="block text-gray-700 text-sm font-bold mb-2">Road Defect:</label>
+                <input type="text" name="ROAD_DEFECT" id="road_defect"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Report Type -->
+            <div class="mb-4">
+                <label for="report_type" class="block text-gray-700 text-sm font-bold mb-2">Report Type:</label>
+                <input type="text" name="REPORT_TYPE" id="report_type"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Crash Type -->
+            <div class="mb-4">
+                <label for="crash_type" class="block text-gray-700 text-sm font-bold mb-2">Crash Type:</label>
+                <input type="text" name="CRASH_TYPE" id="crash_type"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Damage -->
+            <div class="mb-4">
+                <label for="damage" class="block text-gray-700 text-sm font-bold mb-2">Damage:</label>
+                <input type="text" name="DAMAGE" id="damage"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Street Direction -->
+            <div class="mb-4">
+                <label for="street_direction" class="block text-gray-700 text-sm font-bold mb-2">Street
+                    Direction:</label>
+                <input type="text" name="STREET_DIRECTION" id="street_direction"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Number of Units -->
+            <div class="mb-4">
+                <label for="num_units" class="block text-gray-700 text-sm font-bold mb-2">Number of Units:</label>
+                <input type="number" name="NUM_UNITS" id="num_units"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Most Severe Injury -->
+            <div class="mb-4">
+                <label for="most_severe_injury" class="block text-gray-700 text-sm font-bold mb-2">Most Severe
+                    Injury:</label>
+                <input type="text" name="MOST_SEVERE_INJURY" id="most_severe_injury"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Injuries Total -->
+            <div class="mb-4">
+                <label for="injuries_total" class="block text-gray-700 text-sm font-bold mb-2">Total Injuries:</label>
+                <input type="number" step="any" name="INJURIES_TOTAL" id="injuries_total"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Injuries Fatal -->
+            <div class="mb-4">
+                <label for="injuries_fatal" class="block text-gray-700 text-sm font-bold mb-2">Fatal Injuries:</label>
+                <input type="number" step="any" name="INJURIES_FATAL" id="injuries_fatal"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Crash Hour -->
+            <div class="mb-4">
+                <label for="crash_hour" class="block text-gray-700 text-sm font-bold mb-2">Crash Hour:</label>
+                <input type="number" name="CRASH_HOUR" id="crash_hour"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Crash Day of Week -->
+            <div class="mb-4">
+                <label for="crash_day_of_week" class="block text-gray-700 text-sm font-bold mb-2">Crash Day of
+                    Week:</label>
+                <input type="text" name="CRASH_DAY_OF_WEEK" id="crash_day_of_week"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Crash Month -->
+            <div class="mb-4">
+                <label for="crash_month" class="block text-gray-700 text-sm font-bold mb-2">Crash Month:</label>
+                <input type="number" name="CRASH_MONTH" id="crash_month"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Latitude -->
+            <div class="mb-4">
+                <label for="latitude" class="block text-gray-700 text-sm font-bold mb-2">Latitude:</label>
+                <input type="number" step="any" name="LATITUDE" id="latitude"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Longitude -->
+            <div class="mb-4">
+                <label for="longitude" class="block text-gray-700 text-sm font-bold mb-2">Longitude:</label>
+                <input type="number" step="any" name="LONGITUDE" id="longitude"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center justify-between">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Predict
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
