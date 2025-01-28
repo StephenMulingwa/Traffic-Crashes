@@ -1,5 +1,2 @@
 Traffic_Crashes_Chicago.csv
 Traffic_Car_Prediction.pkl
-preprocessor.pkl
-target_encoder.pkl
-traffic_crash_model.h5
